@@ -32,8 +32,8 @@ namespace UzenetkuldoWCF
                         u.Szoveg = reader.GetString("Szoveg");
                         u.KuldesiIdo = reader.GetDateTime("KüldesiIdo");
                         u.UzenetTipus = reader.GetString("UzenetTipus");
-                        u.Telefon = reader.GetString("Telefon");
-                        u.Email = reader.GetString("Email");
+                        u.Telefon = reader["Telefon"].ToString();
+                        u.Email = reader["Email"].ToString();
 
                         uzenetek.Add(u);
                     }
